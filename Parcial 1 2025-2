@@ -1,0 +1,30 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+df=pd.read_csv('spotify-2023.csv',encoding='latin-1')
+df.head()
+
+# Punto A
+df.info()
+df.dtypes.value_counts()
+# Tiene 7 variables tipo object y 17 variables númericas
+
+# Punto B
+algoritmoB=df[df['artist(s)_name']=='Coldplay']
+algoritmoB.value_counts()
+print(algoritmoB['artist(s)_name'].value_counts())
+
+# Hay tres canciones de coldplay en la base de datos
+
+# Punto C
+df.describe()
+
+# Punto D
+def canciones_artista(df, Colplay):
+   canciones_artista = df[df['artist(s)_name'] == 'Coldplay']
+   return canciones_artista
+
+
+
+
